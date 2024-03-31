@@ -11,6 +11,7 @@ const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
+const Testinomial = lazy(() => import("../../components/Testinomial"));
 
 const Home = () => {
   return (
@@ -36,6 +37,11 @@ const Home = () => {
         section={AboutContent.section}
         icon="graphs.svg"
         id="about"
+      />
+      <Testinomial
+      title={"What students Says About Us"}
+      content={"Bahut sahi vibasta hai bhai yaha par mast classes lo idhar"}
+      button={MiddleBlockContent.button}
       />
       <ContentBlock
         direction="right"
