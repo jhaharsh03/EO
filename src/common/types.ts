@@ -1,4 +1,6 @@
 import { TFunction } from "react-i18next";
+// import { RefObject } from "react";
+
 export interface ContainerProps {
   border?: boolean;
   children: React.ReactNode;
@@ -22,12 +24,8 @@ export interface InputProps {
   placeholder: string;
   t: TFunction;
   type?: string;
-  value?: string;
-  onChange: (
-    event:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => void;
+  // ref?: RefObject<HTMLInputElement>;
+  // value?: string;
 }
 export interface validateProps {
   name: string;
