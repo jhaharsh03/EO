@@ -25,6 +25,13 @@ const Home = () => {
         icon="developer.svg"
         id="intro"
       />
+       <ContentBlock
+        direction="left"
+        title={ProductContent.title}
+        content={ProductContent.text}
+        icon="waving.svg"
+        id="product"
+      />
       <MiddleBlock
         title={MiddleBlockContent.title}
         content={MiddleBlockContent.text}
@@ -38,11 +45,6 @@ const Home = () => {
         icon="graphs.svg"
         id="about"
       />
-      <Testinomial
-      title={"What students Says About Us"}
-      content={"Bahut sahi vibasta hai bhai yaha par mast classes lo idhar"}
-      button={MiddleBlockContent.button}
-      />
       <ContentBlock
         direction="right"
         title={MissionContent.title}
@@ -50,12 +52,10 @@ const Home = () => {
         icon="product-launch.svg"
         id="mission"
       />
-      <ContentBlock
-        direction="left"
-        title={ProductContent.title}
-        content={ProductContent.text}
-        icon="waving.svg"
-        id="product"
+      <Testinomial
+      title={"What students Says About Us"}
+      content={"Bahut sahi vibasta hai bhai yaha par mast classes lo idhar"}
+      button={MiddleBlockContent.button}
       />
       <Contact
         title={ContactContent.title}

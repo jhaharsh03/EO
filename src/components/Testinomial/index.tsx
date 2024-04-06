@@ -2,7 +2,7 @@ import { Row, Col, Carousel } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { Button } from "../../common/Button";
-import { MiddleBlockSection, Content, ContentWrapper, ImageWrapper, TextWrapper, Paragraph } from "./styles";
+import { MiddleBlockSection, ContentWrapper, ImageWrapper, Paragraph, CarouselContainer, CarouselItem } from "./styles";
 
 interface MiddleBlockProps {
   title: string;
@@ -11,7 +11,7 @@ interface MiddleBlockProps {
   t: TFunction;
 }
 
-const Testinomial = ({ title, content, button, t }: MiddleBlockProps) => {
+const Testimonial = ({ title, content, button, t }: MiddleBlockProps) => {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
     element.scrollIntoView({
@@ -25,51 +25,36 @@ const Testinomial = ({ title, content, button, t }: MiddleBlockProps) => {
         <Row justify="center" align="middle">
           <ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
-              <div>
                 <h6>{t(title)}</h6>
-                <Content>{t(content)}</Content>
                 {/* Top Half: Carousel */}
-                <Carousel autoplay autoplaySpeed={2000}>
-                  <div>
-                    <div className="carousel-item">
-                      <ImageWrapper>
-                        <img src="/img/Image/one.jpeg" alt="Carousel Image 1" />
-                      </ImageWrapper>
-                      <TextWrapper>
-                        <Paragraph className="left-aligned">The tutors here are very good. Teachers are so good.</Paragraph>
-                      </TextWrapper>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="carousel-item">
-                      <ImageWrapper>
-                        <img src="/img/Image/three.jpeg" alt="Carousel Image 1" />
-                      </ImageWrapper>
-                      <TextWrapper>
-                        <Paragraph className="left-aligned">The tutors here are very good. Teachers are so good.</Paragraph>
-                      </TextWrapper>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="carousel-item">
-                      <ImageWrapper>
-                        <img src="/img/Image/two.jpeg" alt="Carousel Image 2" />
-                      </ImageWrapper>
-                      <TextWrapper>
-                        <Paragraph className="left-aligned">Mast hai bhai yaha lena chahiye. Selection kafi sahi coaching center hai. Samajh rahe ho.</Paragraph>
-                      </TextWrapper>
-                    </div>
-                  </div>
-                  {/* Add more carousel items as needed */}
-                </Carousel>
+                <CarouselContainer autoplay autoplaySpeed={2000} slidesToShow={1} className="custom-carousel">
+                  <CarouselItem>
+                    <ImageWrapper>
+                      <img src="/img/Image/one.jpeg" className="img" alt="Carousel Image 1" />
+                      <Paragraph>""The tutors here are very good. Teachers are so good.""</Paragraph>
+                    </ImageWrapper>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <ImageWrapper>
+                      <img src="/img/Image/three.jpeg" className="img" alt="Carousel Image 3" />
+                      <Paragraph>""The tutors here are very good. Teachers are so good.""</Paragraph>
+                    </ImageWrapper>
+                    
+                  </CarouselItem>
+                  {/* <CarouselItem>
+                    <ImageWrapper>
+                      <img src="/img/Image/two.jpeg" className="img" alt="Carousel Image 2" />
+                      <Paragraph>Mast hai bhai yaha lena chahiye. Selection kafi sahi coaching center hai. Samajh rahe ho.</Paragraph>
+                    </ImageWrapper>
+                   
+                  </CarouselItem> */}
+                </CarouselContainer>
                 {/* Bottom Half: Content */}
                 {button && (
                   <Button name="submit" onClick={() => scrollTo("mission")}>
                     {t(button)}
                   </Button>
                 )}
-                
-              </div>
             </Col>
           </ContentWrapper>
         </Row>
@@ -78,4 +63,4 @@ const Testinomial = ({ title, content, button, t }: MiddleBlockProps) => {
   );
 };
 
-export default withTranslation()(Testinomial);
+export default withTranslation()(Testimonial);

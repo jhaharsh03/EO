@@ -87,8 +87,9 @@ const Footer = ({ t }: { t: TFunction }) => {
               <Large to="/">{t("Careers & Culture")}</Large>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
-              <Label htmlFor="select-lang">{t("Language")}</Label>
-              <LanguageSwitchContainer>
+              {/* <Label htmlFor="select-lang">{t("Language")}</Label> */}
+              <Label htmlFor="select-lang">Articles will be added soon</Label>
+              {/* <LanguageSwitchContainer>
                 <LanguageSwitch onClick={() => handleChange("en")}>
                   <SvgIcon
                     src="united-states.svg"
@@ -105,7 +106,7 @@ const Footer = ({ t }: { t: TFunction }) => {
                     height="30px"
                   />
                 </LanguageSwitch>
-              </LanguageSwitchContainer>
+              </LanguageSwitchContainer> */}
             </Col>
           </Row>
         </Container>
@@ -129,11 +130,11 @@ const Footer = ({ t }: { t: TFunction }) => {
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
+                href="https://api.whatsapp.com/send/?phone=%2B917879893307&text&type=phone_number&app_absent=0"
                 src="github.svg"
               />
               <SocialLink
-                href="https://twitter.com/Adrinlolx"
+                href="https://twitter.com/Educators__"
                 src="twitter.svg"
               />
               <SocialLink
@@ -141,10 +142,10 @@ const Footer = ({ t }: { t: TFunction }) => {
                 src="linkedin.svg"
               />
               <SocialLink
-                href="https://medium.com/@lashakakabadze/"
+                href="https://www.youtube.com/channel/UC3Fgqg5rSGO2fHf2az-FhrA"
                 src="medium.svg"
               />
-              <a
+              {/* <a
                 href="https://ko-fi.com/Y8Y7H8BNJ"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -155,7 +156,7 @@ const Footer = ({ t }: { t: TFunction }) => {
                   src="https://storage.ko-fi.com/cdn/kofi3.png?v=3"
                   alt="Buy Me a Coffee at ko-fi.com"
                 />
-              </a>
+              </a> */}
             </FooterContainer>
           </Row>
         </Container>
