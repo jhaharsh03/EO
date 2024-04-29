@@ -9,7 +9,8 @@ export const MiddleBlockSection = styled.section`
   background-color: rgba(24, 33, 109, 0.1); /* Light purple background color */
 
   @media screen and (max-width: 768px) {
-    padding-bottom: 6rem; /* Increase bottom padding for smaller screens */
+    padding-bottom: 2rem; /* Increase bottom padding for smaller screens */
+    
   }
 `;
 

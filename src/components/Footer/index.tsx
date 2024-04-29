@@ -56,7 +56,7 @@ const Footer = ({ t }: { t: TFunction }) => {
               <Para>
                 {t(`Do you have any question? Feel free to reach out.`)}
               </Para>
-              <a href="mailto:l.qqbadze@gmail.com">
+              <a href="https://api.whatsapp.com/send/?phone=%2B917879893307&text&type=phone_number&app_absent=0">
                 <Chat>{t(`Let's Chat`)}</Chat>
               </a>
             </Col>
@@ -138,11 +138,11 @@ const Footer = ({ t }: { t: TFunction }) => {
                 src="twitter.svg"
               />
               <SocialLink
-                href="https://www.linkedin.com/in/lasha-kakabadze/"
+                href="https://www.youtube.com/@EducatorsOnline/featured"
                 src="linkedin.svg"
               />
               <SocialLink
-                href="https://www.youtube.com/channel/UC3Fgqg5rSGO2fHf2az-FhrA"
+                href="https://www.instagram.com/educators___online/"
                 src="medium.svg"
               />
               {/* <a

@@ -1,3 +1,4 @@
+import { useState } from "react"; // Add useState hook
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { Slide, Zoom } from "react-awesome-reveal";
@@ -8,7 +9,7 @@ import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
-import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
+import { ContactContainer, FormGroup, Span, ButtonContainer, PopupContainer, CloseButton } from "./styles";
 import { useRef } from "react";
 import {StyledInput} from '../../common/Input/styles'
 import {Label} from '../../common/TextArea/styles'
@@ -18,6 +19,7 @@ import { MantineProvider } from '@mantine/core';
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
+  const [showPopup, setShowPopup] = useState(false);
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type as keyof typeof errors];
@@ -81,6 +83,8 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
         nameRef.current.value = "";
         emailRef.current.value = "";
         phoneRef.current.value = "";
+
+        
     
         // Handle success, if needed
       } catch (error) {
@@ -152,6 +156,19 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
           </Slide>
         </Col>
       </Row>
+
+       {/* Popup Modal */}
+       {showPopup && (
+        <PopupContainer>
+          <div>
+            <h2>Congratulations!</h2>
+            <p>Your form has been submitted successfully. We will contact you soon.</p>
+            <CloseButton onClick={() => setShowPopup(false)}>Close</CloseButton>
+          </div>
+        </PopupContainer>
+      )}
+
+
     </ContactContainer>
     // </MantineProvider>
   );
